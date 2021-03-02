@@ -36,6 +36,7 @@ namespace Application.Inventory
                 //         .ToListAsync();
                 var nfp = await _context.Zmpq25b
                         .Where(sap => sap.Gtin == request.Barcode) 
+                        .Where(sap => sap.Site == "8200") 
                         .ToListAsync();      
                 // if (nfp == null)  
                 // {
